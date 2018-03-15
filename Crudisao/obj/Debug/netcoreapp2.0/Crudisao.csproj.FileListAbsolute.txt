@@ -1,0 +1,11 @@
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.csprojResolveAssemblyReference.cache
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.csproj.CoreCompileInputs.cache
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.AssemblyInfoInputs.cache
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.AssemblyInfo.cs
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\bin\Debug\netcoreapp2.0\Crudisao.deps.json
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\bin\Debug\netcoreapp2.0\Crudisao.runtimeconfig.json
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\bin\Debug\netcoreapp2.0\Crudisao.runtimeconfig.dev.json
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\bin\Debug\netcoreapp2.0\Crudisao.dll
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\bin\Debug\netcoreapp2.0\Crudisao.pdb
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.dll
+C:\Users\mpiano\Source\Repos\Crudisao\Crudisao\obj\Debug\netcoreapp2.0\Crudisao.pdb
