@@ -9,7 +9,7 @@ namespace Crudisao.Models
     {
         public int ID { get; set; }
         public int UsuarioId { get; set; }
-        public int ProdutoID { get; set; }
+        public Usuario Usuario { get; set; }
         public DateTime Data { get; set; }
         public ICollection<PedidoItem> Itens { get; set; }
     }
