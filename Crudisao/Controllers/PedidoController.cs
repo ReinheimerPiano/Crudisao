@@ -156,5 +156,32 @@ namespace Crudisao.Controllers
         {
             return _context.Pedidos.Any(e => e.ID == id);
         }
+
+        public IActionResult SelectProduto()
+        {
+            var produtos = _context.Produtos.ToList();
+            return View(produtos);
+        }
+
+        [HttpGet]
+        public IActionResult AddToCart(int id, int pedidoId)
+        {
+            var produto = _context.Produtos.Find(id);
+            var pedido = new Pedido()
+            {
+                Itens = new List<PedidoItem>
+                {
+                    new PedidoItem { ProdutoId = id  }
+                }
+            };
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddToCart(Produto produto)
+        {
+            return View();
+        }
     }
 }

@@ -13123,7 +13123,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mpiano\\.nuget\\packages\\": {},
+    "C:\\Users\\Lab\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -13133,18 +13133,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\mpiano\\source\\repos\\Crudisao\\Crudisao\\Crudisao.csproj",
+      "projectUniqueName": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
       "projectName": "Crudisao",
-      "projectPath": "C:\\Users\\mpiano\\source\\repos\\Crudisao\\Crudisao\\Crudisao.csproj",
-      "packagesPath": "C:\\Users\\mpiano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mpiano\\source\\repos\\Crudisao\\Crudisao\\obj\\",
+      "projectPath": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
+      "packagesPath": "C:\\Users\\Lab\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mpiano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lab\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

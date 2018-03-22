@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Crudisao.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<div id="products" class="row list-group">
+    @foreach (var produto in Model)
+    {
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        @produto.Nome
+                    </h4>
+                    <p class="group inner list-group-item-text">
+                        @produto.Categoria
+                        Produto inserido aqui só pra testar mesmos
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                @string.Format("{0:C}", produto.Preco)
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            @Html.ActionLink("Adicionar ao Carrinho", "AddToCart", "Pedido", new { id = produto.ID, pedidoId = ViewBag.PedidoId }, new { @class = "btn btn-success" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
