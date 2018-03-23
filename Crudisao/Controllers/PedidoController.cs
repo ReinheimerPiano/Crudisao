@@ -22,7 +22,7 @@ namespace Crudisao.Controllers
         // GET: Pedido
         public async Task<IActionResult> Index()
         {
-            var lojaContext = _context.Pedidos.Include(p => p.Usuario);
+            var lojaContext = _context.Pedidos.Include(p => p.Usuario).Include(p => p.Itens).Include("Itens.Produto");
             return View(await lojaContext.ToListAsync());
         }
 
@@ -57,7 +57,7 @@ namespace Crudisao.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,UsuarioId,Data")] Pedido pedido)
+        public async Task<IActionResult> Create(Pedido pedido)
         {
             if (ModelState.IsValid)
             {
@@ -91,13 +91,8 @@ namespace Crudisao.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,UsuarioId,Data")] Pedido pedido)
+        public async Task<IActionResult> Edit([Bind("ID,UsuarioId,Data")] Pedido pedido)
         {
-            if (id != pedido.ID)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
@@ -157,30 +152,47 @@ namespace Crudisao.Controllers
             return _context.Pedidos.Any(e => e.ID == id);
         }
 
-        public IActionResult SelectProduto()
+        public IActionResult SelectProduto(int? pedidoId)
         {
             var produtos = _context.Produtos.ToList();
+            ViewBag.PedidoID = pedidoId;
             return View(produtos);
         }
 
         [HttpGet]
-        public IActionResult AddToCart(int id, int pedidoId)
+        public IActionResult AddToCart(int id, int? pedidoId)
         {
             var produto = _context.Produtos.Find(id);
-            var pedido = new Pedido()
-            {
-                Itens = new List<PedidoItem>
+            var pedido = pedidoId.HasValue ?
+                _context.Pedidos.Include(p => p.Itens).First(p => p.ID == pedidoId.Value) :
+                new Pedido()
                 {
-                    new PedidoItem { ProdutoId = id  }
-                }
-            };
+                    Itens = new List<PedidoItem>()
+                };
+            pedido.Itens.Add(new PedidoItem { ProdutoId = id });
 
-            return View();
+            if (pedidoId.HasValue)
+                _context.Update(produto);
+            else
+                _context.Add(pedido);
+
+            _context.SaveChanges();
+            ViewBag.PedidoID = pedido.ID;
+            return RedirectToAction("SelectProduto", new { pedidoId = pedido?.ID });
+        }
+
+        [HttpGet("[controller]/[action]/{pedidoId}")]
+        public IActionResult Carrinho(int pedidoId)
+        {
+            var pedido = _context.Pedidos.Include(p => p.Itens).Include("Itens.Produto").First(p => p.ID == pedidoId);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "ID", "Nome");
+            return View(pedido);
         }
 
         [HttpPost]
         public IActionResult AddToCart(Produto produto)
         {
+            ViewBag.PedidoID = ViewBag.PedidoID;
             return View();
         }
     }

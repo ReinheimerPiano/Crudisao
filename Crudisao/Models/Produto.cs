@@ -9,7 +9,7 @@ namespace Crudisao.Models
     {
         public int ID { get; set; }
         public string Categoria { get; set; }
-        public int Preco { get; set; }
+        public double Preco { get; set; }
         public string Nome { get; set; }
     }
 }
