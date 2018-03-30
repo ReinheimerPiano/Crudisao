@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Crudisao.Data
 {
@@ -42,9 +41,6 @@ namespace Crudisao.Data
                 var pedidoItem = new PedidoItem { PedidoId = pedido.ID, ProdutoId = prod.ID };
                 context.PedidosItens.Add(pedidoItem);
                 context.SaveChanges();
-            }
-            {
-
             }
         }
     }

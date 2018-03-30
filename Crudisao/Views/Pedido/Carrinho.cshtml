@@ -43,7 +43,7 @@
                 <td class="text-center"><strong>Total 1.99</strong></td>
             </tr>
             <tr>
-                <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+                <td><a asp-action="SelectProduto" asp-route-id="@Model.ID" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
                 <td class="hidden-xs"></td>
                 <td class="hidden-xs text-center"><strong>Total @string.Format("{0:C}", Model.Itens.Sum(i => i.Produto.Preco))</strong></td>
             </tr>
@@ -77,7 +77,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para Pedidos</a>
 </div>
 
 @section Scripts {

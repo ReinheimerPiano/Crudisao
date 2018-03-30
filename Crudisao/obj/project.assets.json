@@ -13123,30 +13123,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lab\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\piano\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
+      "projectUniqueName": "C:\\Users\\piano\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
       "projectName": "Crudisao",
-      "projectPath": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
-      "packagesPath": "C:\\Users\\Lab\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lab\\Source\\Repos\\Crudisao\\Crudisao\\obj\\",
+      "projectPath": "C:\\Users\\piano\\Source\\Repos\\Crudisao\\Crudisao\\Crudisao.csproj",
+      "packagesPath": "C:\\Users\\piano\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\piano\\Source\\Repos\\Crudisao\\Crudisao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lab\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\piano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
